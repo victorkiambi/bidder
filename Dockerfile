@@ -20,6 +20,12 @@ RUN mkdir logs
 RUN mkdir SampleBids
 RUN mkdir Campaigns
 
+# Install the necessary packages
+RUN apk --no-cache add tzdata
+
+# Set the timezone to Nairobi
+ENV TZ=Africa/Nairobi
+
 COPY stub.json /stub.json
 COPY target/*with-dependencies.jar /target
 

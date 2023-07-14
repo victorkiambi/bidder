@@ -48,6 +48,11 @@ public class PixelClickConvertLog {
     /** The deviceid, if present */
     public String deviceid;
 
+    public String ip;
+    public String isp;
+    public String ua;
+    public String os;
+
     public static final int PIXEL = 0;
     public static final int CLICK = 1;
     public static final int CONVERT = 2;
@@ -214,6 +219,18 @@ public class PixelClickConvertLog {
                     case "deviceid":
                         deviceid = items[1];
                         break;
+                        case "ip":
+                            ip = items[1];
+                            break;
+                        case "isp":
+                            isp = items[1];
+                            break;
+                        case "ua":
+                            ua = items[1];
+                            break;
+                        case "os":
+                            os = items[1];
+                            break;
                     default:
                         break;
                 }
